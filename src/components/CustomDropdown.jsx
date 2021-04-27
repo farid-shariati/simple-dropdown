@@ -51,6 +51,11 @@ const CustomDropdown = () => {
         <div
           className={item.title === "Log out" ? "log-out" : "title-div"}
           key={item.id}
+          onClick={
+            item.title === "Settings"
+              ? () => dispatch(changeVisibility())
+              : null
+          }
         >
           <i className="material-icons-outlined">{item.icon}</i>
           <span className="custom-text">{item.title}</span>
