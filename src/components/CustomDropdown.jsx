@@ -8,6 +8,10 @@ const CustomDropdown = () => {
   const companyName = useSelector((state) => state.company.selectedCompany);
   const isDropDownOpen = useSelector((state) => state.dropDown.isOpen);
 
+  const onDropdown = () => {
+    dispatch(changeVisibility());
+  }
+
   const onSelect = (name) => {
     dispatch(selectCompany(name));
     dispatch(changeVisibility());
@@ -41,7 +45,7 @@ const CustomDropdown = () => {
       ))}
       <div className="line"></div>
       {options.map((item) => (
-        <div className="title-div" key={item.id}>
+        <div className="title-div" key={item.id} onClick={onDropdown}>
           <i className="material-icons-outlined">{item.icon}</i>
           <span className="custom-text">{item.title}</span>
         </div>
@@ -51,11 +55,7 @@ const CustomDropdown = () => {
         <div
           className={item.title === "Log out" ? "log-out" : "title-div"}
           key={item.id}
-          onClick={
-            item.title === "Settings"
-              ? () => dispatch(changeVisibility())
-              : null
-          }
+          onClick={onDropdown}
         >
           <i className="material-icons-outlined">{item.icon}</i>
           <span className="custom-text">{item.title}</span>
