@@ -1,0 +1,2 @@
+export const SELECT_COMPANY = "SELECT_COMPANY";
+export const IS_DROPDOWN_OPEN = "IS_DROPDOWN_OPEN";

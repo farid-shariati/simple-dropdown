@@ -1,0 +1,68 @@
+.main {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px $grey-3;
+}
+
+.title-text {
+  padding: 10px 10px;
+}
+
+.company-text {
+  color: $grey-5;
+}
+
+.company-name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.title-div {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.log-out {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  color: $red;
+}
+
+.custom-text {
+  margin-left: 10px;
+}
+
+.line {
+  border: 1px solid $grey-2;
+}
+
+.selected-company {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  background-color: $light-green;
+  color: $dark-green;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.selected-company:hover {
+  background-color: $green;
+}
+
+.title-div:hover {
+  background-color: $grey-1;
+  cursor: pointer;
+}
+
+.log-out:hover {
+  background-color: $grey-1;
+  cursor: pointer;
+}
+
+.title-div:active {
+  background-color: $grey-2;
+}
